@@ -22,10 +22,18 @@
 // let summetion = findOddSum(numberArray);
 // console.log(summetion);
 
+function getSumOfAnArray(numbers){
+    let sum = 0;
+    for( let i = 0; i < numbers.length; i++){
+        const index = i;
+        const element = numbers[i];
+        sum = sum + element;
+    }
+    return sum;
+}
 
 function getOddNumberOfAnArray(numbers){
     let oddNumbers = [];
-    let sum = 0;
     for ( let i = 0; i < numbers.length; i++){
         const index = i;
         const element = numbers[index];
@@ -33,12 +41,14 @@ function getOddNumberOfAnArray(numbers){
         if (element % 2 !== 0){
             oddNumbers.push(element);
         }
-        sum = sum + element;
     }
-    console.log(oddNumbers);
-    return sum;
+    return oddNumbers;
 }
 
 let numbers = [23, 11, 34, 23, 54, 34, 67, 87, 56];
-let sumOfOddArray =  getOddNumberOfAnArray(numbers);
-console.log(sumOfOddArray);
+console.log(numbers);
+const oddNumers = getOddNumberOfAnArray(numbers);
+console.log('The Odd element array: ', oddNumers);
+
+const sumOfOddArray = getSumOfAnArray(oddNumers);
+console.log('The sum of the odd element: ', sumOfOddArray);
