@@ -9,4 +9,19 @@ function factorial(n){
 }
 
 let factorialOfN = factorial(7);
-console.log(factorialOfN);
+// console.log(factorialOfN);
+
+// find factorial number using while loop
+
+function findFactorial(number){
+    let restult = 1;
+    let i = number;
+    while( i >= 1){
+        restult = restult * i;
+        i--;
+    }
+    return restult;
+}
+
+const factorialNumber = findFactorial(5);
+console.log(factorialNumber);
